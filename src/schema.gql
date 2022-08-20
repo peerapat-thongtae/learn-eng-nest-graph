@@ -1,0 +1,51 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateVocabularyInput {
+  """Word Description"""
+  description: String!
+
+  """Translation"""
+  translation: [String!]!
+
+  """Word"""
+  word: String!
+}
+
+type Mutation {
+  createVocabulary(createVocabularyInput: CreateVocabularyInput!): Vocabulary!
+  updateVocabulary(updateVocabularyInput: UpdateVocabularyInput!): Vocabulary!
+}
+
+type Query {
+  getVocabularyByWord(word: String!): Vocabulary!
+  vocabularies: [Vocabulary!]!
+  vocabulary(_id: String!): Vocabulary!
+}
+
+input UpdateVocabularyInput {
+  _id: String!
+
+  """Word Description"""
+  description: String
+
+  """Translation"""
+  translation: [String!]
+
+  """Word"""
+  word: String
+}
+
+type Vocabulary {
+  _id: String!
+
+  """Word Description"""
+  description: String!
+
+  """Translation"""
+  translation: [String!]!
+
+  """Word"""
+  word: String!
+}
